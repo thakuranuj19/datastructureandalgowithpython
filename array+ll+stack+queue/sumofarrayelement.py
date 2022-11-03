@@ -14,4 +14,17 @@ def find_sum(lst, sumval):
 lst = [1,21,3,14,5,60,7,6]
 k = 81
 
-print(find_sum(lst,k))
+#print(find_sum(lst,k))
+
+lst1=[2,7,11,15,1]
+k = 9
+
+def find_new_sum(lst, sumval):
+    foundval = dict()
+    for ele in lst:
+        if (sumval-ele) in foundval:
+            return (sumval-ele, ele)
+        foundval[ele] = 1
+    return False
+
+print(find_new_sum(lst1,k))
